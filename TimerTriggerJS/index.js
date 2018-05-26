@@ -7,5 +7,10 @@ module.exports = function (context, myTimer) {
     }
     context.log('JavaScript timer trigger function ran!:', timeStamp);   
     
+    var urlParser = require('./urlParser');
+    urlParser.parse('http://feeds.podtrac.com/tBPkjrcL0_m0');
+
+    context.log('JavaScript timer trigger function done!:', timeStamp);   
+
     context.done();
 };
